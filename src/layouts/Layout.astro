@@ -1,0 +1,31 @@
+---
+const { title = "Redžo Efendić — Portfolio", description = "Portfolio" } = Astro.props;
+import "../styles/global.css";
+---
+<html lang="en" class="antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <header class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+      <a href="/" class="font-semibold text-lg">Redžo Efendić</a>
+      <nav class="flex gap-4 text-sm items-center">
+        <a href="/projects" class="opacity-80 hover:opacity-100">Projects</a>
+        <a href="#contact" class="opacity-80 hover:opacity-100">Contact</a>
+        <slot name="theme" />
+      </nav>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pb-16">
+      <slot />
+    </main>
+
+    <footer class="max-w-5xl mx-auto px-4 py-10 text-sm opacity-70">
+      © {new Date().getFullYear()} Redžo Efendić
+    </footer>
+  </body>
+</html>
