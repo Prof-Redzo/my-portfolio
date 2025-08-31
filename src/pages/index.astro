@@ -1,15 +1,34 @@
 ---
-import ThemeToggle from '../components/ThemeToggle.astro';
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout>
-	  <div slot="theme">
-    <ThemeToggle client:load />
-  </div>
-  ...
+  <section class="text-center py-16">
+    <h1 class="text-4xl font-bold mb-4">Hi, I’m Redžo Efendić 👋</h1>
+    <p class="text-lg opacity-80 max-w-2xl mx-auto">
+      I’m a developer passionate about JavaScript, Node.js, React and building modern web apps.
+    </p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {projects.slice(0, 2).map((p) => <ProjectCard project={p} />)}
+    </div>
+    <div class="mt-6">
+      <a href="/src/data/projects.ts" class="text-blue-600 hover:underline">View all projects →</a>
+    </div>
+  </section>
+
+  <section id="contact" class="mt-16 text-center">
+    <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+    <p class="opacity-80">Reach out to me via:</p>
+    <div class="flex gap-6 justify-center mt-4">
+      <a href="mailto:efendicredzo4@gmail.com" class="hover:underline">Email</a>
+      <a href="https://github.com/Prof-Redzo" target="_blank" class="hover:underline">GitHub</a>
+      <a href="https://www.linkedin.com/in/red%C5%BEo-efendi%C4%87-8782392a5/" target="_blank" class="hover:underline">LinkedIn</a>
+    </div>
+  </section>
 </Layout>
