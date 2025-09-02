@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<Layout>
+  <section class="py-16">
+    <h1 class="text-3xl font-bold mb-8 text-center">All Projects</h1>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+</Layout>

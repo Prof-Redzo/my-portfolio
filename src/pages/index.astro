@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { projects } from "../data/projects";
+import { projects } from "../data/projects.ts";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
@@ -18,7 +18,7 @@ import ProjectCard from "../components/ProjectCard.astro";
       {projects.slice(0, 2).map((p) => <ProjectCard project={p} />)}
     </div>
     <div class="mt-6">
-      <a href="/src/data/projects.ts" class="text-blue-600 hover:underline">View all projects →</a>
+      <a href="/projects" class="text-blue-600 hover:underline">View all projects →</a>
     </div>
   </section>
 

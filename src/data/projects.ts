@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: "Monster Game",
     description: "A fun JavaScript game built while learning core JS concepts.",
-    image: "images/monster-game.jfif",
+    image: "/images/monster-game.jfif",
     url: "https://github.com/Prof-Redzo/monster-game",
     slug: "monster-game",
     tech: ["JavaScript", "HTML", "CSS"],
@@ -28,9 +28,18 @@ export const projects: Project[] = [
   {
     title: "Weather App",
     description: "Weather app built with React + Vite",
-    image: "images/weather.png",
+    image: "/images/weather.png",
     url: "https://github.com/Prof-Redzo/weather-app-react",
     slug: "weather-app",
     tech: ["React + Vite"],
+  },
+
+   {
+    title: "Smetovi",
+    description: "smetovi.ba project, an open-source website for the mountain Smetovi near Zenica, Bosnia and Herzegovina.",
+    image: "/images/smetovi.png",
+    url: "https://github.com/zeforgezenica/smetovi",
+    slug: "Smetovi.ba",
+    tech: ["Astro"],
   },
 ];
