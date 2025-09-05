@@ -34,7 +34,16 @@ export const projects: Project[] = [
     tech: ["React + Vite"],
   },
 
-   {
+  {
+    title: "Recipes App",
+    description: "A React application for browsing and managing recipes. Uses Redux for state management and demonstrates handling complex UI with global state.",
+    image: "/images/projects/recipe-app.jpg",
+    url: "https://github.com/Prof-Redzo/recipes-app",
+    slug: "recipes-app",
+    tech: ["React", "Redux", "JavaScript", "CSS"],
+  },
+
+  {
     title: "Smetovi",
     description: "smetovi.ba project, an open-source website for the mountain Smetovi near Zenica, Bosnia and Herzegovina.",
     image: "/images/smetovi.png",
