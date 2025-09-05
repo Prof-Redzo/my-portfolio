@@ -42,4 +42,22 @@ export const projects: Project[] = [
     slug: "Smetovi.ba",
     tech: ["Astro"],
   },
+
+  {
+    title: "Busez",
+    description: "Busez project, App for tracking bus transit data in Zenica.",
+    image: "/images/Busez.png",
+    url: "https://github.com/zeforgezenica/busez",
+    slug: "kadjebus.zeforge.ba",
+    tech: ["Next.js"],
+  },
+
+  {
+    title: "Library",
+    description: "A Node.js + MongoDB backend app for library.",
+    image: "/images/library.jfif",
+    url: "https://github.com/Prof-Redzo/library---backend",
+    slug: "library---backend",
+    tech: ["Node.js", "Express", "MongoDB"],
+  },
 ];
