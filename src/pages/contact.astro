@@ -10,10 +10,13 @@ import Layout from "../layouts/Layout.astro";
     </p>
 
     <form
-      action="https://formspree.io/f/your-form-id" 
+      action="https://formsubmit.co/efendicredzo4@gmail.com"
       method="POST"
       class="space-y-4"
     >
+    
+      <input type="hidden" name="_captcha" value="false" />
+
       <div>
         <label for="name" class="block text-sm font-medium mb-1">Name</label>
         <input
@@ -54,5 +57,40 @@ import Layout from "../layouts/Layout.astro";
         Send Message
       </button>
     </form>
+
+    <p id="form-status" class="mt-4 text-center"></p>
   </section>
+
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      const form = document.querySelector("form");
+      const statusBox = document.getElementById("form-status");
+
+      if (!form || !statusBox) return;
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: data,
+          });
+
+          if (res.ok) {
+            statusBox.textContent = "✅ Your message has been sent!";
+            statusBox.className = "mt-4 text-center text-green-600";
+            form.reset();
+          } else {
+            statusBox.textContent = "❌ Something went wrong. Please try again.";
+            statusBox.className = "mt-4 text-center text-red-600";
+          }
+        } catch (err) {
+          statusBox.textContent = "⚠️ Network error. Please try again later.";
+          statusBox.className = "mt-4 text-center text-red-600";
+        }
+      });
+    });
+  </script>
 </Layout>

@@ -2,28 +2,69 @@
 import Layout from "../../layouts/Layout.astro";
 import { projects } from "../../data/projects";
 
-const { slug } = Astro.params;
-const project = projects.find((p) => p.slug === slug);
-
-if (!project) {
-  throw new Error(`Project not found for slug: ${slug}`);
+export async function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
 }
+
+const { project } = Astro.props;
 ---
 
 <Layout>
-  <section class="py-16 max-w-3xl mx-auto">
-    <h1 class="text-4xl font-bold mb-4">{project.title}</h1>
-    <p class="text-lg opacity-80 mb-6">{project.description}</p>
+  <section class="py-16 max-w-4xl mx-auto px-4">
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+      {project.title}
+    </h1>
 
-    {project.image && <img src={project.image} alt={project.title} class="rounded-lg shadow mb-6" />}
+    <!-- Description -->
+    <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+      {project.description}
+    </p>
 
-    <h2 class="text-xl font-semibold mb-2">Technologies</h2>
-    <ul class="list-disc list-inside mb-6">
-      {project.tech?.map((t) => <li>{t}</li>)}
-    </ul>
+    <!-- Image -->
+    {project.image && (
+      <img
+        src={project.image}
+        alt={project.title}
+        class="rounded-xl shadow-lg mb-8 w-full"
+      />
+    )}
 
-    <a href={project.url} target="_blank" class="text-blue-600 hover:underline">
-      View on GitHub →
-    </a>
+    <!-- Technologies -->
+    {project.tech && (
+      <>
+        <h2 class="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">
+          Technologies
+        </h2>
+        <ul class="flex flex-wrap gap-3 mb-8">
+          {project.tech.map((t) => (
+            <li class="bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded-md text-sm">
+              {t}
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    <!-- Links -->
+    <div class="flex gap-4">
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow"
+      >
+        View on GitHub →
+      </a>
+      <a
+        href="/projects"
+        class="px-5 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 rounded-lg shadow"
+      >
+        ← Back to Projects
+      </a>
+    </div>
   </section>
 </Layout>

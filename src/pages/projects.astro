@@ -9,12 +9,13 @@ import ProjectCard from "../components/ProjectCard.astro";
     <h1 class="text-3xl font-bold mb-8 text-center">All Projects</h1>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {projects.map((p) => (
-        <a href={`/projects/${p.slug}`} class="block">
-          <ProjectCard project={p} />
-        </a>
-      ))}
+      {
+        projects.map((p) => (
+          <a href={`/projects/${p.slug}`} class="block">
+            <ProjectCard project={p} />
+          </a>
+        ))
+      }
     </div>
   </section>
 </Layout>
-

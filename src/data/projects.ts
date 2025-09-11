@@ -45,7 +45,7 @@ export const projects: Project[] = [
 
   {
     title: "Smetovi",
-    description: "smetovi.ba project, an open-source website for the mountain Smetovi near Zenica, Bosnia and Herzegovina.",
+    description: "I was contributer on smetovi.ba project, an open-source website for the mountain Smetovi near Zenica, Bosnia and Herzegovina.",
     image: "/images/smetovi.png",
     url: "https://github.com/zeforgezenica/smetovi",
     slug: "Smetovi.ba",
@@ -54,7 +54,7 @@ export const projects: Project[] = [
 
   {
     title: "Busez",
-    description: "Busez project, App for tracking bus transit data in Zenica.",
+    description: "I was contributer on open-source Busez project, App for tracking bus transit data in Zenica.",
     image: "/images/Busez.png",
     url: "https://github.com/zeforgezenica/busez",
     slug: "kadjebus.zeforge.ba",

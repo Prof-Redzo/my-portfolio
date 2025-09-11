@@ -1,36 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { projects } from "../data/projects.ts";
+import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout>
+  <!-- Hero sekcija -->
   <section class="text-center py-16">
     <h1 class="text-4xl font-bold mb-4">Hi, I’m Redžo Efendić 👋</h1>
     <p class="text-lg opacity-80 max-w-2xl mx-auto">
-      I’m a developer passionate about JavaScript, Node.js, React and building modern web apps.
+      Junior Full-Stack Developer | React, Node.js & MongoDB
     </p>
+
+    <div class="mt-6 flex gap-4 justify-center">
+      <a
+        href="/projects"
+        class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow transition"
+      >
+        View Projects
+      </a>
+      <a
+        href="#contact"
+        class="px-6 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 rounded-lg shadow transition"
+      >
+        Hire Me
+      </a>
+    </div>
   </section>
 
-  <section class="mt-12">
+  <!-- Featured Projects -->
+  <section class="mt-12 max-w-6xl mx-auto px-4">
     <h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
-    <div class="grid gap-6 sm:grid-cols-2">
-  {projects.slice(0, 2).map((p) => <ProjectCard project={p} />)}
-</div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.slice(0, 3).map((p) => (
+        <ProjectCard project={p} />
+      ))}
+    </div>
 
-<div class="mt-6">
-  <a href="/projects" class="text-blue-600 hover:underline">View all projects →</a>
-</div>
-
+    <div class="mt-6 text-center">
+      <a
+        href="/projects"
+        class="text-blue-600 hover:underline text-lg font-medium"
+      >
+        View all projects →
+      </a>
+    </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="mt-16 text-center">
     <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
     <p class="opacity-80">Reach out to me via:</p>
     <div class="flex gap-6 justify-center mt-4">
       <a href="mailto:efendicredzo4@gmail.com" class="hover:underline">Email</a>
-      <a href="https://github.com/Prof-Redzo" target="_blank" class="hover:underline">GitHub</a>
-      <a href="https://www.linkedin.com/in/red%C5%BEo-efendi%C4%87-8782392a5/" target="_blank" class="hover:underline">LinkedIn</a>
+      <a
+        href="https://github.com/Prof-Redzo"
+        target="_blank"
+        class="hover:underline"
+        >GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/red%C5%BEo-efendi%C4%87-8782392a5/"
+        target="_blank"
+        class="hover:underline"
+        >LinkedIn</a
+      >
     </div>
   </section>
 </Layout>
