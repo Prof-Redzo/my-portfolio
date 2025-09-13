@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-// https://astro.build/config
+
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
-  site: 'https://<prof-redzo>.github.io',
-  base: '/<my-portfolio>',       
+  site: 'https://prof-redzo.github.io', 
+  base: '/my-portfolio',              
 });

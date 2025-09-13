@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Doctor Finder",
     description: "A Node.js + MongoDB backend app for finding doctors.",
-    image: "/images/doctor-finder.avif",
+    image: "/public/doctor-finder.avif",
     url: "https://github.com/Prof-Redzo/doctor-finder",
     slug: "doctor-finder",
     tech: ["Node.js", "Express", "MongoDB"],
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: "Monster Game",
     description: "A fun JavaScript game built while learning core JS concepts.",
-    image: "/images/monster-game.jfif",
+    image: "/public/monster-game.jfif",
     url: "https://github.com/Prof-Redzo/monster-game",
     slug: "monster-game",
     tech: ["JavaScript", "HTML", "CSS"],
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     title: "Weather App",
     description: "Weather app built with React + Vite",
-    image: "/images/weather.png",
+    image: "/public/weather.png",
     url: "https://github.com/Prof-Redzo/weather-app-react",
     slug: "weather-app",
     tech: ["React", "Vite"],
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     title: "Recipes App",
     description:
       "A React application for browsing and managing recipes. Uses Redux for state management.",
-    image: "/images/recipe-app.jpg",
+    image: "/public/recipe-app.jpg",
     url: "https://github.com/Prof-Redzo/recipes-app",
     slug: "recipes-app",
     tech: ["React", "Redux", "JavaScript", "Material UI"],
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "Smetovi",
     description:
       "I was a contributor on smetovi.ba, an open-source website for the mountain Smetovi near Zenica.",
-    image: "/images/smetovi.png",
+    image: "/public/smetovi.png",
     url: "https://github.com/zeforgezenica/smetovi",
     slug: "smetovi",
     tech: ["Astro"],
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: "Busez",
     description:
       "I was a contributor on the open-source Busez project, an app for tracking bus transit data in Zenica.",
-    image: "/images/Busez.png",
+    image: "/public/Busez.png",
     url: "https://github.com/zeforgezenica/busez",
     slug: "busez",
     tech: ["Next.js"],
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   {
     title: "Library",
     description: "A Node.js + MongoDB backend app for library management.",
-    image: "/images/library.jfif",
+    image: "/public/library.jfif",
     url: "https://github.com/Prof-Redzo/library---backend",
     slug: "library",
     tech: ["Node.js", "Express", "MongoDB"],
