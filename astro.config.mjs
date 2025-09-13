@@ -6,5 +6,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://prof-redzo.github.io', 
-  base: '/my-portfolio',              
+  base: '/my-portfolio/',              
 });
