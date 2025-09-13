@@ -5,6 +5,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://prof-redzo.github.io', 
+  site: 'https://Prof-Redzo.github.io', 
   base: '/my-portfolio/',              
 });
