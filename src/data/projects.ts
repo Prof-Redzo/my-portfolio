@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Doctor Finder",
     description: "A Node.js + MongoDB backend app for finding doctors.",
-    image: "/projects/doctor-finder.avif",
+    image: "/my-portfolio/projects/doctor-finder.avif",
     url: "https://github.com/Prof-Redzo/doctor-finder",
     slug: "doctor-finder",
     tech: ["Node.js", "Express", "MongoDB"],
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: "Monster Game",
     description: "A fun JavaScript game built while learning core JS concepts.",
-    image: "/projects/monster-game.jfif",
+    image: "/my-portfolio/projects/monster-game.jfif",
     url: "https://github.com/Prof-Redzo/monster-game",
     slug: "monster-game",
     tech: ["JavaScript", "HTML", "CSS"],
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     title: "Weather App",
     description: "Weather app built with React + Vite",
-    image: "/projects/weather.png",
+    image: "/my-portfolio/projects/weather.png",
     url: "https://github.com/Prof-Redzo/weather-app-react",
     slug: "weather-app",
     tech: ["React", "Vite"],
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     title: "Recipes App",
     description:
       "A React application for browsing and managing recipes. Uses Redux for state management.",
-    image: "/projects/recipe-app.jpg",
+    image: "/my-portfolio/projects/recipe-app.jpg",
     url: "https://github.com/Prof-Redzo/recipes-app",
     slug: "recipes-app",
     tech: ["React", "Redux", "JavaScript", "Material UI"],
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "Smetovi",
     description:
       "I was a contributor on smetovi.ba, an open-source website for the mountain Smetovi near Zenica.",
-    image: "/projects/smetovi.png",
+    image: "/my-portfolio/projects/smetovi.png",
     url: "https://github.com/zeforgezenica/smetovi",
     slug: "smetovi",
     tech: ["Astro"],
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: "Busez",
     description:
       "I was a contributor on the open-source Busez project, an app for tracking bus transit data in Zenica.",
-    image: "/projects/Busez.png",
+    image: "/my-portfolio/projects/Busez.png",
     url: "https://github.com/zeforgezenica/busez",
     slug: "busez",
     tech: ["Next.js"],
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   {
     title: "Library",
     description: "A Node.js + MongoDB backend app for library management.",
-    image: "/projects/library.jfif",
+    image: "/my-portfolio/projects/library.jfif",
     url: "https://github.com/Prof-Redzo/library---backend",
     slug: "library",
     tech: ["Node.js", "Express", "MongoDB"],
