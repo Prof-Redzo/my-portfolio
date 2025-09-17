@@ -5,14 +5,14 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout>
-  <!-- Hero sekcija -->
-  <section class="text-center py-16">
+  <!-- Hero -->
+  <section class="text-center py-16 px-4">
     <h1 class="text-4xl font-bold mb-4">Hi, I’m Redžo Efendić 👋</h1>
     <p class="text-lg opacity-80 max-w-2xl mx-auto">
       Junior Full-Stack Developer | React, Node.js & MongoDB
     </p>
 
-    <div class="mt-6 flex gap-4 justify-center">
+    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href="/my-portfolio/projects"
         class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow transition"
@@ -30,8 +30,9 @@ import ProjectCard from "../components/ProjectCard.astro";
 
   <!-- Featured Projects -->
   <section class="mt-12 max-w-6xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <h2 class="text-2xl font-bold mb-6 text-center sm:text-left">Featured Projects</h2>
+    
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {projects.slice(0, 3).map((p) => (
         <ProjectCard project={p} />
       ))}
@@ -48,23 +49,25 @@ import ProjectCard from "../components/ProjectCard.astro";
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="mt-16 text-center">
+  <section id="contact" class="mt-16 text-center px-4">
     <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
     <p class="opacity-80">Reach out to me via:</p>
-    <div class="flex gap-6 justify-center mt-4">
+    <div class="flex gap-6 justify-center mt-4 flex-wrap">
       <a href="mailto:efendicredzo4@gmail.com" class="hover:underline">Email</a>
       <a
         href="https://github.com/Prof-Redzo"
         target="_blank"
         class="hover:underline"
-        >GitHub</a
       >
+        GitHub
+      </a>
       <a
         href="https://www.linkedin.com/in/red%C5%BEo-efendi%C4%87-8782392a5/"
         target="_blank"
         class="hover:underline"
-        >LinkedIn</a
       >
+        LinkedIn
+      </a>
     </div>
   </section>
 </Layout>
