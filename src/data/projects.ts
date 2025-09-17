@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "Busez is a community-driven project built with Next.js. It provides real-time bus tracking data for Zenica. My work included contributing to the frontend and integrating API calls.",
   },
   {
-    title: "Library-Backend",
+    title: "Library Backend",
     description: "A Node.js + MongoDB backend app for library management.",
     image: "/my-portfolio/projects/library.jfif",
     url: "https://github.com/Prof-Redzo/library---backend",
